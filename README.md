@@ -1,6 +1,5 @@
 # Christmas 2020
-This is the Christmas scene that I have created for 2020, as shown below:
-![Christmas Scene](ChristmasScene.png)
+This is the Christmas scene that I have created for 2020. This version passes in a name via the URL.
 Many thanks to the creators of the 3D models:
 Tree - Aya Kawa - (https://poly.google.com/view/5Wb8VjhKy5T)  
 Snowmen - Alex "Saffy" Safayan - (https://poly.google.com/view/0DiDQUcuv1d)  

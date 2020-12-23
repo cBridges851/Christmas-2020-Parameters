@@ -7,37 +7,40 @@
 		src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
 	<script src="https://cdn.rawgit.com/matthewbryancurtis/aframe-star-system-component/db4f1030/index.js"></script>
 	<script>
-			AFRAME.registerComponent('ribbon', {
-				init: function () {
-					let x = 0, y = 0;
-                    let points = [];
-                    // A
-                    points.push(new THREE.Vector2(0, 0));
-                    // B
-                    points.push(new THREE.Vector2(20, 0));
-                    // C
-                    points.push(new THREE.Vector2(19, -1));
-                    // D
-                    points.push(new THREE.Vector2(20, -2));
-                    // E
-                    points.push(new THREE.Vector2(0, -2));
-                    // F
-                    points.push(new THREE.Vector2(1, -1));
+		const url = window.location.href
+		const regexPattern = /(?<=\?name=)[a-z]+/i
+		const match = url.match(regexPattern)
+		AFRAME.registerComponent('ribbon', {
+			init: function () {
+				let x = 0, y = 0;
+				let points = [];
+				// A
+				points.push(new THREE.Vector2(0, 0));
+				// B
+				points.push(new THREE.Vector2(20, 0));
+				// C
+				points.push(new THREE.Vector2(19, -1));
+				// D
+				points.push(new THREE.Vector2(20, -2));
+				// E
+				points.push(new THREE.Vector2(0, -2));
+				// F
+				points.push(new THREE.Vector2(1, -1));
 
 
-					for (var i = 0; i < points.length; i++) {
-						points[i].multiplyScalar(0.25);
-					}
-					let RibbonShape = new THREE.Shape(points);
-
-
-
-					let geometry = new THREE.ShapeGeometry(RibbonShape);
-					let material = new THREE.MeshBasicMaterial({ color: 0xB92636 });
-					let mesh = new THREE.Mesh(geometry, material);
-					this.el.object3D.add(mesh);
+				for (var i = 0; i < points.length; i++) {
+					points[i].multiplyScalar(0.25);
 				}
-			});
+				let RibbonShape = new THREE.Shape(points);
+
+
+
+				let geometry = new THREE.ShapeGeometry(RibbonShape);
+				let material = new THREE.MeshBasicMaterial({ color: 0xB92636 });
+				let mesh = new THREE.Mesh(geometry, material);
+				this.el.object3D.add(mesh);
+			}
+		});
 
 	</script>
 </head>
@@ -96,13 +99,20 @@
 		<a-entity gltf-model="#present-green-red-square" modify-materials position="20 -18 -18" rotation="0 110 10"
 			scale="10 10 8"></a-entity>
 
-		<a-entity text="font: https://cdn.aframe.io/fonts/mozillavr.fnt; value: Merry Christmas Everyone!; width: 10;"
+		<a-entity id="textOutput" text="font: https://cdn.aframe.io/fonts/mozillavr.fnt; value: Merry Christmas Everyone!; width: 10;"
 			position="2.25 -1.2 -5" rotation="-30 0 0"></a-entity>
 
 		<a-entity position="-5 -1 -5.2" 
 		rotation="-30 0 0" scale="2 2 1.5" ribbon></a-entity>
 
 	</a-scene>
+
+	<script>
+		if (match !== null) {
+			const textOutput = document.querySelector("#textOutput");
+			textOutput.setAttribute("text", `font: https://cdn.aframe.io/fonts/mozillavr.fnt; value: Merry Christmas ${match}!; width: 10;`)
+		}
+	</script>
 </body>
 
 </html>
