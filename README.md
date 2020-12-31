@@ -6,3 +6,8 @@ Snowmen - Alex "Saffy" Safayan - (https://poly.google.com/view/0DiDQUcuv1d)
 Candy Canes - Poly By Google - (https://poly.google.com/view/7DbOKA1uXfK)  
 Present 1 - Aaron Clifford - (https://poly.google.com/view/8wyQNiCKMBP)  
 Present 2 - Aaron Clifford - (https://poly.google.com/view/fTQnwgjpcuv)  
+
+## Motivation
+## Tech/Framework
+## Installation
+## How To Use
