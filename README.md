@@ -1,4 +1,4 @@
-# Christmas 2020
+# Christmas-2020-Parameters
 This is the Christmas scene that I have created for 2020. This version passes in a name via the URL.
 Many thanks to the creators of the 3D models:  
 Tree - Aya Kawa - (https://poly.google.com/view/5Wb8VjhKy5T)  
