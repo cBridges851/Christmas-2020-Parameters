@@ -21,6 +21,9 @@ This uses A-Frame, a framework that is used to create web VR scenes. This was cr
 ## How To Use
 - If you don't wish to download this onto your computer, you can simply view it here: https://cbridges851.github.io/Christmas-2020-Parameters/
 - If you do have this on your computer, you can open index.html in your text editor and open it on a live server.
+- To change the name on the scene, change the value after `name=` in the URL.
+- This is what the scene looks like:
+![Christmas Scene Parameters Screenshot](ChristmasScene.png)
 
 ## Licence
 This project uses the [GPL-3.0 License](https://github.com/cBridges851/Christmas-2020-Parameters/blob/main/LICENSE)
